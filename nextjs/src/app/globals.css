@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Neutral Sans";
+  src: url("/fonts/NeutralSansVF.woff2") format("woff2");
+}
+
+.ns {
+  font-family: "Neutral Sans";
+}

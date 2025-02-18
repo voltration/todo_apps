@@ -3,10 +3,14 @@
 import { delete_todo } from "../actions";
 import { Todo } from "../types";
 import Image from "next/image";
+import { todo_store } from "./todo-list";
 
 export default function TodoCard(todo: Todo) {
+    const store = todo_store();
+
     async function submit() {
         await delete_todo(todo.id);
+        store.delete_todo(todo.id);
     }
 
     return (

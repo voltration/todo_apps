@@ -3,23 +3,19 @@
 import { useState } from "react";
 import { create_todo } from "../actions";
 import Image from "next/image";
-import { todo_store } from "../store";
+import { todo_store } from "./todo-list";
 
 export default function CreateCard() {
     const [title, set_title] = useState("");
     const [desc, set_desc] = useState("");
-    const add_todo = todo_store((state) => state.add_todo);
+    const store = todo_store();
 
     async function submit() {
-        const new_todo = await create_todo({
-            title,
-            description: desc
-        });
+        const new_todo = await create_todo({ title, description: desc });
 
         set_title("");
         set_desc("");
-
-        if (new_todo) add_todo(new_todo);
+        if (new_todo) store.add_todo(new_todo);
     }
 
     return (

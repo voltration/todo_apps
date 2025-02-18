@@ -13,11 +13,11 @@ export async function get_todos() {
 export async function create_todo(data: { title: string; description: string | null }) {
     if (!data.title) return;
 
-    return await db.insert(todos).values({
+    return (await db.insert(todos).values({
         id: createId(),
         title: data.title,
         description: data.description
-    }).returning();
+    }).returning())[0];
 }
 
 export async function delete_todo(id: string) {

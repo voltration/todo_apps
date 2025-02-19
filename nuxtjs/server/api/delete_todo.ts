@@ -1,14 +1,15 @@
+import { eq } from "drizzle-orm";
 import { db } from "../db/db";
 import { todos } from "../db/schema";
-import { eq } from "drizzle-orm";
 
-interface RequestBody {
+interface Props {
     id: string;
 }
 
 export default defineEventHandler(async (e) => {
-    const { id } = await readBody<RequestBody>(e);
-    if (!id) return;
+    const body = await readBody<Props>(e);
 
-    await db.delete(todos).where(eq(todos.id, id));
-});
+    if (!body.id) return;
+
+    await db.delete(todos).where(eq(todos.id, body.id));
+})

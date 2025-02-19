@@ -38,7 +38,7 @@ export default function CreateCard() {
             </div>
             <button
                 onClick={submit}
-                className="bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-2"
+                className="bg-white/10 hover:bg-white/20 transition-colors shadow rounded-lg p-2"
             >
                 <Image src="/icons/plus.svg" alt="Add Todo" width={24} height={24} />
             </button>

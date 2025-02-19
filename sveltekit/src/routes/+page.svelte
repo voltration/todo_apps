@@ -40,7 +40,7 @@
 
             <button
                 type="submit"
-                class="flex items-center justify-center hover:bg-white/20 cursor-pointer bg-white/10 shadow rounded-xl size-10 p-2"
+                class="flex items-center justify-center hover:bg-white/20 cursor-pointer bg-white/10 shadow rounded-lg size-10 p-2"
                 ><img src="/icons/plus.svg" alt="Create" /></button
             >
             <div
@@ -66,7 +66,7 @@
 
             <button
                 type="submit"
-                class="flex items-center justify-center hover:bg-white/20 cursor-pointer bg-white/10 shadow rounded-xl size-10 p-2"
+                class="flex items-center justify-center hover:bg-white/20 cursor-pointer bg-white/10 shadow rounded-lg size-10 p-2"
                 ><img src="/icons/x.svg" alt="Delete" /></button
             >
 

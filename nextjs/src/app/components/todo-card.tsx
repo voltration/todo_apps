@@ -19,7 +19,7 @@ export default function TodoCard(todo: Todo) {
                 <h1 className="ns text-xl font-black text-white w-full">{todo.title}</h1>
                 <p className="ns text-white w-full">{todo.description}</p>
             </div>
-            <button onClick={submit} className="flex items-center justify-center hover:bg-white/20 cursor-pointer bg-white/10 shadow rounded-xl size-10 p-2">
+            <button onClick={submit} className="flex items-center justify-center hover:bg-white/20 cursor-pointer bg-white/10 shadow rounded-lg size-10 p-2">
                 <Image src="/icons/x.svg" alt="Delete" width={24} height={24} />
             </button>
             <div

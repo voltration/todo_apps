@@ -1,5 +1,3 @@
-export interface Todo {
-    id: string;
-    title: string;
-    description: string | null;
-}
+import type { todos } from "./server/db/schema";
+
+export type Todo = typeof todos.$inferSelect;
